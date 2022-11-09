@@ -1,17 +1,15 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <h3>Popular</h3>
+      <ion-col size="6"></ion-col>
+    </ion-row>
+  </ion-grid>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <app-slideshow-poster [peliculas]="peliculasPopular"></app-slideshow-poster>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <app-slideshow-backdrop [peliculas]="peliculasTop"></app-slideshow-backdrop>
+
+  <app-slideshow-pares [peliculas]="peliculasPopular" (cargarMas)="cargarMas()"></app-slideshow-pares>
+
 </ion-content>

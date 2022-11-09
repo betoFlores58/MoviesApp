@@ -1,0 +1,13 @@
+<ion-list>
+  <ion-list-header>
+  </ion-list-header>
+  <ion-card *ngFor="let peli of peliculas" (click)="verDetalle(peli.id)">
+    <ion-card-header>
+      <ion-badge color="primary" mode="ios">{{peli.vote_average}}</ion-badge>
+      <ion-card-title>{{peli.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <img [src]="peli.backdrop_path| imagen">
+    </ion-card-content>
+  </ion-card>
+</ion-list>

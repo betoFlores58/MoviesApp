@@ -1,0 +1,15 @@
+<ion-slides mode="ios" scrollbar="ios" [options]="slidesOpt">
+  <ion-slide *ngFor="let peli of peliculas">
+    <ion-card (click)="verDetalle(peli.id)">
+      <ion-card-header>
+        <ion-card-subtitle>
+          <ion-badge color="primary" mode="ios">{{peli.vote_average}}</ion-badge>
+        </ion-card-subtitle>
+        <ion-card-title>{{peli.title}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <img class="poster" [src]="peli.poster_path| imagen">
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+</ion-slides>
